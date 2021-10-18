@@ -19,6 +19,5 @@ public class CarRegisterDto {
 
     private CarStation carStation;
 
-
     private CarType carType;
 }

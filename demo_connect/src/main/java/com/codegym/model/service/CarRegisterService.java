@@ -19,8 +19,9 @@ public class CarRegisterService implements ICarRegisterService {
     }
 
     @Override
-    public void save(CarRegister carRegister) {
+    public CarRegister save(CarRegister carRegister) {
         carRegisterRepository.save(carRegister);
+        return carRegister;
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.util.List;
 public interface ICarRegisterService {
     List<CarRegister> findAll();
 
-    void save(CarRegister carRegister);
+    CarRegister save(CarRegister carRegister);
 
     CarRegister findById(int id);
 
