@@ -34,7 +34,15 @@ public class CarRegisterRestController {
         return new ResponseEntity<>(carRegisters, HttpStatus.OK);
     }
 
-    @CrossOrigin
+    @GetMapping("/find/{id}")
+    public ResponseEntity<CarRegister> findById(@PathVariable Integer id){
+        CarRegister carRegister = this.carRegisterService.findById(id);
+        if (carRegister != null){
+            return new ResponseEntity<>(carRegister, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
     @PutMapping("/edit")
     public ResponseEntity<CarRegister> editCar(@RequestBody CarRegister carRegister) {
         CarRegister editCar = this.carRegisterService.save(carRegister);

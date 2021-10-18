@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid" style="padding-top: 10px; padding-bottom: 20px">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="exampleFormControlFile1">Ảnh học sinh: </label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                               onchange="loadFile(event)" accept="image/*">
+                        <img src="anh1.jpg" style="height: auto; width: 40%" id="output"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputEmail4">Tên học sinh: </label>
+                        <input type="text" class="form-control" id="inputEmail4" value="Nguyễn Thanh Lâm">
+                        <div>
+                            <small style="color: red">Không được để trống</small>
+                            <small style="color: red">Có nhiều hơn 5 chữ cái</small>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Ngày sinh:</label>
+                        <input type="date" class="form-control" id="inputPassword4" value="1998-10-16">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="father">Họ và tên cha: </label>
+                        <input type="text" class="form-control" id="father" value="Nguyễn Thanh Lâm">
+                        <div>
+                            <small style="color: red">Không được để trống</small>
+                            <small style="color: red">Có nhiều hơn 5 chữ cái</small>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="mother">Họ và tên mẹ: </label>
+                        <input type="text" class="form-control" id="mother" value="Nguyễn Thanh Lâm">
+                        <div>
+                            <small style="color: red">Không được để trống</small>
+                            <small style="color: red">Có nhiều hơn 5 chữ cái</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại của cha hoặc mẹ: </label>
+                    <input type="text" class="form-control" id="phone" value="0825161098">
+                    <div>
+                        <small style="color: red">Số điện thoại phải bắt đầu từ 090XXXXXX</small>
+                    </div>
+                </div>
+                <div>
+                    <label style="padding-right: 10px">Giới tính:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                               value="male" checked>
+                        <label class="form-check-label" for="inlineRadio1">Nam</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                               value="female">
+                        <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                               value="other">
+                        <label class="form-check-label" for="inlineRadio3">Khác</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country">Quê quán: </label>
+                    <input type="text" class="form-control" id="country" value="Đà Nẵng">
+                    <div>
+                        <small style="color: red">Không được để trống</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nation">Dân tộc: </label>
+                    <input type="text" class="form-control" id="nation" value="Kinh">
+                    <div>
+                        <small style="color: red">Không được để trống</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="religion">Tôn giáo: </label>
+                    <input type="text" class="form-control" id="religion" value="Không">
+                    <div>
+                        <small style="color: red">Không được để trống</small>
+                    </div>
+                </div>
+                <div align="right">
+                    <span style="padding-right: 10px">
+                        <button class="btn btn-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-x-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                            Huỷ
+                        </button>
+                    </span>
+                    <span>
+                        <button type="submit" class="btn btn-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                            Sửa
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+
+<script>
+    var loadFile = function (event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function () {
+            URL.revokeObjectURL(output.src)
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+</body>
+</html>
