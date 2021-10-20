@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tạo mới học sinh</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
@@ -13,87 +13,94 @@
         <div class="col-lg-6">
             <form>
                 <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="exampleFormControlFile1">Ảnh học sinh: </label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
-                               onchange="loadFile(event)" accept="image/*">
-                        <img style="height: auto; width: 30%" id="output"/>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputEmail4">Tên học sinh: </label>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" style="color: #1BB1DC">Tên học sinh<span style="color: red">*</span> : </label>
                         <input type="text" class="form-control" id="inputEmail4">
                         <div>
-                            <small style="color: red">Không được để trống</small>
-                            <small style="color: red">Có nhiều hơn 5 chữ cái</small>
+                            <small style="color: red">Tên không được để trống</small>
+                            <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
                         </div>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="date">Ngày sinh:</label>
+                    <div class="form-group col-md-6">
+                        <label for="date" style="color: #1BB1DC">Ngày sinh<span style="color: red">*</span> :</label>
                         <input type="date" class="form-control" id="date">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="father">Họ và tên cha: </label>
+                        <label for="father">Họ và tên cha<span style="color: red">*</span> : </label>
                         <input type="text" class="form-control" id="father">
                         <div>
-                            <small style="color: red">Không được để trống</small>
-                            <small style="color: red">Có nhiều hơn 5 chữ cái</small>
+                            <small style="color: red">Tên không được để trống</small>
+                            <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
                         </div>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="mother">Họ và tên mẹ: </label>
+                        <label for="mother">Họ và tên mẹ<span style="color: red">*</span> : </label>
                         <input type="text" class="form-control" id="mother">
                         <div>
-                            <small style="color: red">Không được để trống</small>
-                            <small style="color: red">Có nhiều hơn 5 chữ cái</small>
+                            <small style="color: red">Tên không được để trống</small>
+                            <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Số điện thoại của cha hoặc mẹ: </label>
-                    <input type="text" class="form-control" id="phone">
-                    <div>
-                        <small style="color: red">Số điện thoại phải bắt đầu từ 090XXXXXX</small>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="phone">Số điện thoại của cha hoặc mẹ<span style="color: red">*</span> : </label>
+                        <input type="text" class="form-control" id="phone">
+                        <div>
+                            <small style="color: red">Số điện thoại phải bắt đầu từ 090XXXXXX</small>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="religion">Tôn giáo: </label>
+                        <input type="text" class="form-control" id="religion">
+                        <div>
+                            <small style="color: red">Không được để trống</small>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <label style="padding-right: 10px">Giới tính:</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                               value="male">
-                        <label class="form-check-label" for="inlineRadio1">Nam</label>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="country">Quê quán<span style="color: red">*</span> : </label>
+                        <input type="text" class="form-control" id="country">
+                        <div>
+                            <small style="color: red">Không được để trống</small>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                               value="female">
-                        <label class="form-check-label" for="inlineRadio2">Nữ</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                               value="other">
-                        <label class="form-check-label" for="inlineRadio3">Khác</label>
+                    <div class="form-group col-md-6">
+                        <label for="nation">Dân tộc: </label>
+                        <input type="text" class="form-control" id="nation">
+                        <div>
+                            <small style="color: red">Không được để trống</small>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="country">Quê quán: </label>
-                    <input type="text" class="form-control" id="country">
-                    <div>
-                        <small style="color: red">Không được để trống</small>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label style="padding-right: 10px">Giới tính:</label>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                   value="male">
+                            <label class="form-check-label" for="inlineRadio1">Nam</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                   value="female">
+                            <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                   value="other">
+                            <label class="form-check-label" for="inlineRadio3">Khác</label>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="nation">Dân tộc: </label>
-                    <input type="text" class="form-control" id="nation">
-                    <div>
-                        <small style="color: red">Không được để trống</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="religion">Tôn giáo: </label>
-                    <input type="text" class="form-control" id="religion">
-                    <div>
-                        <small style="color: red">Không được để trống</small>
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlFile1">Ảnh học sinh: </label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                               onchange="loadFile(event)" accept="image/*">
+                        <img style="height: auto; width: 70%" id="output"/>
                     </div>
                 </div>
                 <div align="right">
@@ -105,6 +112,15 @@
                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                             </svg>
                             Huỷ
+                        </button>
+                    </span>
+                    <span style="padding-right: 10px">
+                        <button type="reset" class="btn btn-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-eraser" viewBox="0 0 16 16">
+                                <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"/>
+                            </svg>
+                            Xoá biểu mẫu
                         </button>
                     </span>
                     <span>
@@ -125,13 +141,13 @@
 </div>
 
 <script>
-    var loadFile = function (event) {
-        var output = document.getElementById('output');
-        output.src = URL.createObjectURL(event.target.files[0]);
-        output.onload = function () {
-            URL.revokeObjectURL(output.src)
-        }
-    };
+	var loadFile = function (event) {
+		var output = document.getElementById('output');
+		output.src = URL.createObjectURL(event.target.files[0]);
+		output.onload = function () {
+			URL.revokeObjectURL(output.src)
+		}
+	};
 </script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
