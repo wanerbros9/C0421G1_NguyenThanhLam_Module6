@@ -55,6 +55,12 @@ public class CarRegisterRestController {
         return new ResponseEntity<>(addCar, HttpStatus.CREATED);
     }
 
+//    @PostMapping("/add")
+//    public ResponseEntity<Integer> addCar(@RequestBody CarRegister carRegister) {
+//        CarRegister addCar = this.carRegisterService.save(carRegister);
+//        return new ResponseEntity<>(addCar.getId(), HttpStatus.CREATED);
+//    }
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteCar(@PathVariable("id") Integer id) {
         this.carRegisterService.delete(id);
