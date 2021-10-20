@@ -7,148 +7,202 @@
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
-<div class="container-fluid" style="padding-top: 10px; padding-bottom: 20px">
+
+<div class="container-fluid">
+    <div class="row" align="right">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus"
+                 viewBox="0 0 16 16">
+                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                <path fill-rule="evenodd"
+                      d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+            Thêm học sinh
+        </button>
+    </div>
     <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4" style="color: #1BB1DC">Tên học sinh<span style="color: red">*</span> : </label>
-                        <input type="text" class="form-control" id="inputEmail4">
-                        <div>
-                            <small style="color: red">Tên không được để trống</small>
-                            <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
+        <!-- Modal -->
+        <form>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title; font-weight-bold" id="exampleModalLabel" style="color: #1BB1DC" >Thêm học sinh</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="date" style="color: #1BB1DC">Ngày sinh<span style="color: red">*</span> :</label>
-                        <input type="date" class="form-control" id="date">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="father">Họ và tên cha<span style="color: red">*</span> : </label>
-                        <input type="text" class="form-control" id="father">
-                        <div>
-                            <small style="color: red">Tên không được để trống</small>
-                            <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
+                        <div class="modal-body">
+                            <div class="container-fluid" style="padding-top: 10px; padding-bottom: 20px">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="name" style="color: #1BB1DC" class="font-weight-bold">Tên học sinh<span
+                                                        style="color: red">*</span> :
+                                                </label>
+                                                <input type="text" class="form-control" id="name">
+                                                <div>
+                                                    <small style="color: red">Tên không được để trống</small>
+                                                    <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="date" style="color: #1BB1DC" class="font-weight-bold">Ngày sinh<span
+                                                        style="color: red">*</span> :</label>
+                                                <input type="date" class="form-control" id="date">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="father" style="color: #1BB1DC" class="font-weight-bold">Họ và tên cha<span
+                                                        style="color: red">*</span> :
+                                                </label>
+                                                <input type="text" class="form-control" id="father">
+                                                <div>
+                                                    <small style="color: red">Tên không được để trống</small>
+                                                    <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="mother" style="color: #1BB1DC" class="font-weight-bold">Họ và tên mẹ<span
+                                                        style="color: red">*</span> :
+                                                </label>
+                                                <input type="text" class="form-control" id="mother">
+                                                <div>
+                                                    <small style="color: red">Tên không được để trống</small>
+                                                    <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="phone" style="color: #1BB1DC" class="font-weight-bold">Số điện thoại của cha hoặc
+                                                    mẹ<span style="color: red">*</span>
+                                                    : </label>
+                                                <input type="text" class="form-control" id="phone">
+                                                <div>
+                                                    <small style="color: red">Số điện thoại phải bắt đầu từ 090,091
+                                                        (VD:090XXXXXX, X có 6 số từ
+                                                        0 đến 9)</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="religion" style="color: #1BB1DC" class="font-weight-bold">Tôn giáo: </label>
+                                                <input type="text" class="form-control" id="religion">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="country" style="color: #1BB1DC" class="font-weight-bold">Quê quán<span
+                                                        style="color: red">*</span> : </label>
+                                                <input type="text" class="form-control" id="country">
+                                                <div>
+                                                    <small style="color: red">Quê quán không được để trống</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="nation" style="color: #1BB1DC" class="font-weight-bold">Dân tộc<span
+                                                        style="color: red">*</span> : </label>
+                                                <input type="text" class="form-control" id="nation">
+                                                <div>
+                                                    <small style="color: red">Dân tộc không được để trống</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label style="padding-right: 10px; color: #1BB1DC" class="font-weight-bold">Giới tính<span
+                                                        style="color: red">*</span> :</label>
+                                                <br>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                           name="inlineRadioOptions" id="inlineRadio1"
+                                                           value="male">
+                                                    <label class="form-check-label" for="inlineRadio1">Nam</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                           name="inlineRadioOptions" id="inlineRadio2"
+                                                           value="female">
+                                                    <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                           name="inlineRadioOptions" id="inlineRadio3"
+                                                           value="other">
+                                                    <label class="form-check-label" for="inlineRadio3">Khác</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="exampleFormControlFile1" style="color: #1BB1DC" class="font-weight-bold">Ảnh học sinh<span
+                                                        style="color: red">*</span> : </label>
+                                                <input type="file" class="form-control-file"
+                                                       id="exampleFormControlFile1"
+                                                       onchange="loadFile(event)" accept="image/*">
+                                                <img style="height: auto; width: 70%" id="output"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="mother">Họ và tên mẹ<span style="color: red">*</span> : </label>
-                        <input type="text" class="form-control" id="mother">
-                        <div>
-                            <small style="color: red">Tên không được để trống</small>
-                            <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="phone">Số điện thoại của cha hoặc mẹ<span style="color: red">*</span> : </label>
-                        <input type="text" class="form-control" id="phone">
-                        <div>
-                            <small style="color: red">Số điện thoại phải bắt đầu từ 090XXXXXX</small>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="religion">Tôn giáo: </label>
-                        <input type="text" class="form-control" id="religion">
-                        <div>
-                            <small style="color: red">Không được để trống</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="country">Quê quán<span style="color: red">*</span> : </label>
-                        <input type="text" class="form-control" id="country">
-                        <div>
-                            <small style="color: red">Không được để trống</small>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="nation">Dân tộc: </label>
-                        <input type="text" class="form-control" id="nation">
-                        <div>
-                            <small style="color: red">Không được để trống</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label style="padding-right: 10px">Giới tính:</label>
-                        <br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                   value="male">
-                            <label class="form-check-label" for="inlineRadio1">Nam</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                   value="female">
-                            <label class="form-check-label" for="inlineRadio2">Nữ</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                   value="other">
-                            <label class="form-check-label" for="inlineRadio3">Khác</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="exampleFormControlFile1">Ảnh học sinh: </label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
-                               onchange="loadFile(event)" accept="image/*">
-                        <img style="height: auto; width: 70%" id="output"/>
-                    </div>
-                </div>
-                <div align="right">
-                    <span style="padding-right: 10px">
-                        <button class="btn btn-dark">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                 class="bi bi-x-circle" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                            Huỷ
-                        </button>
-                    </span>
-                    <span style="padding-right: 10px">
-                        <button type="reset" class="btn btn-warning">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                 class="bi bi-eraser" viewBox="0 0 16 16">
-                                <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"/>
-                            </svg>
-                            Xoá biểu mẫu
-                        </button>
-                    </span>
-                    <span>
-                        <button type="submit" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                 class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                     fill="currentColor"
+                                     class="bi bi-x-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                                Huỷ
+                            </button>
+                            <button type="reset" class="btn btn-warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                     fill="currentColor"
+                                     class="bi bi-eraser" viewBox="0 0 16 16">
+                                    <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"/>
+                                </svg>
+                                Xoá biểu mẫu
+                            </button>
+                            <button type="button" class="btn btn-success">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                     fill="currentColor"
+                                     class="bi bi-plus-circle" viewBox="0 0 16 16">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                            </svg>
-                            Thêm
-                        </button>
-                    </span>
+                                </svg>
+                                Thêm học sinh mới
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </form>
-        </div>
-        <div class="col-lg-3"></div>
+            </div>
+        </form>
     </div>
 </div>
-
 <script>
-	var loadFile = function (event) {
-		var output = document.getElementById('output');
-		output.src = URL.createObjectURL(event.target.files[0]);
-		output.onload = function () {
-			URL.revokeObjectURL(output.src)
-		}
-	};
+    var loadFile = function (event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function () {
+            URL.revokeObjectURL(output.src)
+        }
+    };
 </script>
+<!--<script>-->
+<!--    $('#myModal').on('shown.bs.modal', function () {-->
+<!--        $('#myInput').trigger('focus')-->
+<!--    })-->
+<!--</script>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
