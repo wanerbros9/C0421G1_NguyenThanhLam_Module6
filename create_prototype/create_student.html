@@ -5,6 +5,9 @@
     <title>Tạo mới học sinh</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+
+    </style>
 </head>
 <body>
 
@@ -28,8 +31,9 @@
                  aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title; font-weight-bold" id="exampleModalLabel" style="color: #1BB1DC" >Thêm học sinh</h5>
+                        <div class="modal-header" style="background-color: #1BB1DC">
+                            <h5 class="modal-title; font-weight-bold " id="exampleModalLabel" style="color: black">Thêm
+                                học sinh</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -40,37 +44,44 @@
                                     <div class="col-lg-12">
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="name" style="color: #1BB1DC" class="font-weight-bold">Tên học sinh<span
-                                                        style="color: red">*</span> :
+                                                <label for="name" style="color: #1BB1DC" class="font-weight-bold">Tên
+                                                    học sinh<span
+                                                            style="color: red">*</span> :
                                                 </label>
-                                                <input type="text" class="form-control" id="name">
+                                                <input type="text" class="form-control" id="name"
+                                                       placeholder="Nguyễn Văn A">
                                                 <div>
                                                     <small style="color: red">Tên không được để trống</small>
                                                     <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="date" style="color: #1BB1DC" class="font-weight-bold">Ngày sinh<span
-                                                        style="color: red">*</span> :</label>
-                                                <input type="date" class="form-control" id="date">
+                                                <label for="date" style="color: #1BB1DC" class="font-weight-bold">Ngày
+                                                    sinh<span
+                                                            style="color: red">*</span> :</label>
+                                                <input data-date type="date" class="form-control" id="date">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="father" style="color: #1BB1DC" class="font-weight-bold">Họ và tên cha<span
-                                                        style="color: red">*</span> :
+                                                <label for="father" style="color: #1BB1DC" class="font-weight-bold">Họ
+                                                    và tên cha<span
+                                                            style="color: red">*</span> :
                                                 </label>
-                                                <input type="text" class="form-control" id="father">
+                                                <input type="text" class="form-control" id="father"
+                                                       placeholder="Nguyễn Văn B">
                                                 <div>
                                                     <small style="color: red">Tên không được để trống</small>
                                                     <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="mother" style="color: #1BB1DC" class="font-weight-bold">Họ và tên mẹ<span
-                                                        style="color: red">*</span> :
+                                                <label for="mother" style="color: #1BB1DC" class="font-weight-bold">Họ
+                                                    và tên mẹ<span
+                                                            style="color: red">*</span> :
                                                 </label>
-                                                <input type="text" class="form-control" id="mother">
+                                                <input type="text" class="form-control" id="mother"
+                                                       placeholder="Nguyễn Văn C">
                                                 <div>
                                                     <small style="color: red">Tên không được để trống</small>
                                                     <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>
@@ -79,10 +90,12 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="phone" style="color: #1BB1DC" class="font-weight-bold">Số điện thoại của cha hoặc
+                                                <label for="phone" style="color: #1BB1DC" class="font-weight-bold">Số
+                                                    điện thoại của cha hoặc
                                                     mẹ<span style="color: red">*</span>
                                                     : </label>
-                                                <input type="text" class="form-control" id="phone">
+                                                <input type="text" class="form-control" id="phone"
+                                                       placeholder="090XXXXXX">
                                                 <div>
                                                     <small style="color: red">Số điện thoại phải bắt đầu từ 090,091
                                                         (VD:090XXXXXX, X có 6 số từ
@@ -90,23 +103,28 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="religion" style="color: #1BB1DC" class="font-weight-bold">Tôn giáo: </label>
-                                                <input type="text" class="form-control" id="religion">
+                                                <label for="religion" style="color: #1BB1DC" class="font-weight-bold">Tôn
+                                                    giáo: </label>
+                                                <input type="text" class="form-control" id="religion"
+                                                       placeholder="Phật giáo">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="country" style="color: #1BB1DC" class="font-weight-bold">Quê quán<span
-                                                        style="color: red">*</span> : </label>
-                                                <input type="text" class="form-control" id="country">
+                                                <label for="country" style="color: #1BB1DC" class="font-weight-bold">Quê
+                                                    quán<span
+                                                            style="color: red">*</span> : </label>
+                                                <input type="text" class="form-control" id="country"
+                                                       placeholder="Đà Nẵng">
                                                 <div>
                                                     <small style="color: red">Quê quán không được để trống</small>
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="nation" style="color: #1BB1DC" class="font-weight-bold">Dân tộc<span
-                                                        style="color: red">*</span> : </label>
-                                                <input type="text" class="form-control" id="nation">
+                                                <label for="nation" style="color: #1BB1DC" class="font-weight-bold">Dân
+                                                    tộc<span
+                                                            style="color: red">*</span> : </label>
+                                                <input type="text" class="form-control" id="nation" placeholder="Kinh">
                                                 <div>
                                                     <small style="color: red">Dân tộc không được để trống</small>
                                                 </div>
@@ -114,7 +132,8 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label style="padding-right: 10px; color: #1BB1DC" class="font-weight-bold">Giới tính<span
+                                                <label style="padding-right: 10px; color: #1BB1DC"
+                                                       class="font-weight-bold">Giới tính<span
                                                         style="color: red">*</span> :</label>
                                                 <br>
                                                 <div class="form-check form-check-inline">
@@ -137,10 +156,11 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="exampleFormControlFile1" style="color: #1BB1DC" class="font-weight-bold">Ảnh học sinh<span
+                                                <label for="img" style="color: #1BB1DC"
+                                                       class="font-weight-bold">Ảnh học sinh<span
                                                         style="color: red">*</span> : </label>
                                                 <input type="file" class="form-control-file"
-                                                       id="exampleFormControlFile1"
+                                                       id="img"
                                                        onchange="loadFile(event)" accept="image/*">
                                                 <img style="height: auto; width: 70%" id="output"/>
                                             </div>
@@ -184,13 +204,13 @@
     </div>
 </div>
 <script>
-    var loadFile = function (event) {
-        var output = document.getElementById('output');
-        output.src = URL.createObjectURL(event.target.files[0]);
-        output.onload = function () {
-            URL.revokeObjectURL(output.src)
-        }
-    };
+	var loadFile = function (event) {
+		var output = document.getElementById('output');
+		output.src = URL.createObjectURL(event.target.files[0]);
+		output.onload = function () {
+			URL.revokeObjectURL(output.src)
+		}
+	};
 </script>
 <!--<script>-->
 <!--    $('#myModal').on('shown.bs.modal', function () {-->
