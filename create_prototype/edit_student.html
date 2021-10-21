@@ -11,9 +11,9 @@
 <div class="container-fluid">
     <div class="row" align="right">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                 class="bi bi-pencil-square" viewBox="0 0 16 16">
+                 class="bi bi-pencil-square" viewBox="0 0 16 16" style="margin-bottom: 5px">
                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                 <path fill-rule="evenodd"
                       d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
@@ -29,7 +29,8 @@
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header" style="background-color: #1BB1DC">
-                            <h5 class="modal-title font-weight-bold" id="exampleModalLabel" style="color: black">Chỉnh sửa thông tin
+                            <h5 class="modal-title font-weight-bold" id="exampleModalLabel" style="color: black">Chỉnh
+                                sửa thông tin
                                 học sinh</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -41,8 +42,9 @@
                                     <div class="col-lg-12">
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="name" style="color: #1BB1DC" class="font-weight-bold">Họ và tên học sinh<span
-                                                        style="color: red">*</span> :
+                                                <label for="name" style="color: #1BB1DC" class="font-weight-bold">Họ và
+                                                    tên học sinh<span
+                                                            style="color: red">*</span> :
                                                 </label>
                                                 <input type="text" class="form-control" id="name"
                                                        value="Nguyễn Thanh Lâm">
@@ -52,15 +54,17 @@
                                                 <!--                                                </div>-->
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="date" style="color: #1BB1DC" class="font-weight-bold">Ngày sinh<span
-                                                        style="color: red">*</span> :</label>
+                                                <label for="date" style="color: #1BB1DC" class="font-weight-bold">Ngày
+                                                    sinh<span
+                                                            style="color: red">*</span> :</label>
                                                 <input type="date" class="form-control" id="date" value="2021-10-16">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="father" style="color: #1BB1DC" class="font-weight-bold">Họ và tên cha<span
-                                                        style="color: red">*</span> :
+                                                <label for="father" style="color: #1BB1DC" class="font-weight-bold">Họ
+                                                    và tên cha<span
+                                                            style="color: red">*</span> :
                                                 </label>
                                                 <input type="text" class="form-control" id="father" value="Minh">
                                                 <div>
@@ -69,10 +73,12 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="mother" style="color: #1BB1DC" class="font-weight-bold">Họ và tên mẹ<span
-                                                        style="color: red">*</span> :
+                                                <label for="mother" style="color: #1BB1DC" class="font-weight-bold">Họ
+                                                    và tên mẹ<span
+                                                            style="color: red">*</span> :
                                                 </label>
-                                                <input type="text" class="form-control" id="mother" placeholder="Nguyễn Văn C">
+                                                <input type="text" class="form-control" id="mother"
+                                                       placeholder="Nguyễn Văn C">
                                                 <div>
                                                     <small style="color: red">Tên không được để trống</small>
                                                     <!--                                                    <small style="color: red">Tên phải nhiều hơn 5 chữ cái</small>-->
@@ -81,7 +87,8 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="phone" style="color: #1BB1DC" class="font-weight-bold">Số điện thoại của cha hoặc
+                                                <label for="phone" style="color: #1BB1DC" class="font-weight-bold">Số
+                                                    điện thoại của cha hoặc
                                                     mẹ<span style="color: red">*</span>
                                                     : </label>
                                                 <input type="text" class="form-control" id="phone" value="099392999">
@@ -96,22 +103,26 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="religion" style="color: #1BB1DC" class="font-weight-bold">Tôn giáo: </label>
-                                                <input type="text" class="form-control" id="religion" placeholder="Phật giáo">
+                                                <label for="religion" style="color: #1BB1DC" class="font-weight-bold">Tôn
+                                                    giáo: </label>
+                                                <input type="text" class="form-control" id="religion"
+                                                       placeholder="Phật giáo">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="country" style="color: #1BB1DC" class="font-weight-bold">Quê quán<span
-                                                        style="color: red">*</span> : </label>
+                                                <label for="country" style="color: #1BB1DC" class="font-weight-bold">Quê
+                                                    quán<span
+                                                            style="color: red">*</span> : </label>
                                                 <input type="text" class="form-control" id="country" value="Đà Nẵng">
                                                 <!--                                                <div>-->
                                                 <!--                                                    <small style="color: red">Quê quán không được để trống</small>-->
                                                 <!--                                                </div>-->
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="nation" style="color: #1BB1DC" class="font-weight-bold">Dân tộc<span
-                                                        style="color: red">*</span> : </label>
+                                                <label for="nation" style="color: #1BB1DC" class="font-weight-bold">Dân
+                                                    tộc<span
+                                                            style="color: red">*</span> : </label>
                                                 <input type="text" class="form-control" id="nation" placeholder="Kinh">
                                                 <div>
                                                     <small style="color: red">Dân tộc không được để trống</small>
@@ -120,7 +131,8 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label style="padding-right: 10px; color: #1BB1DC" class="font-weight-bold">Giới tính<span
+                                                <label style="padding-right: 10px; color: #1BB1DC"
+                                                       class="font-weight-bold">Giới tính<span
                                                         style="color: red">*</span> :</label>
                                                 <br>
                                                 <div class="form-check form-check-inline">
@@ -143,7 +155,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="exampleFormControlFile1" style="color: #1BB1DC" class="font-weight-bold">Ảnh học sinh<span
+                                                <label for="exampleFormControlFile1" style="color: #1BB1DC"
+                                                       class="font-weight-bold">Ảnh học sinh<span
                                                         style="color: red">*</span> : </label>
                                                 <input type="file" class="form-control-file"
                                                        id="exampleFormControlFile1"
@@ -164,7 +177,7 @@
                             <button type="button" class="btn btn-danger" data-dismiss="modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                      fill="currentColor"
-                                     class="bi bi-x-circle" viewBox="0 0 16 16">
+                                     class="bi bi-x-circle" viewBox="0 0 16 16" style="margin-bottom: 5px">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                                 </svg>
@@ -172,6 +185,7 @@
                             </button>
                             <button type="button" class="btn btn-info">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     style="margin-bottom: 5px"
                                      class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                     <path fill-rule="evenodd"
@@ -187,13 +201,13 @@
     </div>
 </div>
 <script>
-    var loadFile = function (event) {
-        var output = document.getElementById('output');
-        output.src = URL.createObjectURL(event.target.files[0]);
-        output.onload = function () {
-            URL.revokeObjectURL(output.src)
-        }
-    };
+	var loadFile = function (event) {
+		var output = document.getElementById('output');
+		output.src = URL.createObjectURL(event.target.files[0]);
+		output.onload = function () {
+			URL.revokeObjectURL(output.src)
+		}
+	};
 </script>
 <!--<script>-->
 <!--    $('#myModal').on('shown.bs.modal', function () {-->
