@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 public interface IStudentService extends GeneralService<Student, Integer>{
     Page<Student> findByClassroom(int classroomId, Pageable pageable);
 
-    Student create(boolean delete_flag, String student_address, String student_date_of_birth, String student_ethnicity, String student_father_name, String student_gender, String student_mother_name, String student_name, String student_parent_phone, String student_religion);
+    void saveStudent(boolean delete_flag, String student_address, String student_date_of_birth, String student_ethnicity, String student_father_name, String student_gender, String student_mother_name, String student_name, String student_parent_phone, String student_religion);
 
 
 }

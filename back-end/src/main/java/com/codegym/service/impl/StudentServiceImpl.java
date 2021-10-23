@@ -46,7 +46,7 @@ public class StudentServiceImpl implements IStudentService {
     }
 
     @Override
-    public Student create(boolean delete_flag, String student_address, String student_date_of_birth, String student_ethnicity, String student_father_name, String student_gender, String student_mother_name, String student_name, String student_parent_phone, String student_religion) {
-        return null;
+    public void saveStudent(boolean delete_flag, String student_address, String student_date_of_birth, String student_ethnicity, String student_father_name, String student_gender, String student_mother_name, String student_name, String student_parent_phone, String student_religion) {
+        this.studentRepository.saveStudent(delete_flag, student_address, student_date_of_birth, student_ethnicity, student_father_name, student_gender, student_mother_name, student_name, student_parent_phone, student_religion);
     }
 }

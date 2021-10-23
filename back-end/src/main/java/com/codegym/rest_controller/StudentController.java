@@ -32,7 +32,10 @@ public class StudentController {
 
     @PostMapping("/add")
     public ResponseEntity<Integer> addStudent(@RequestBody Student student) {
-        Student newStudent = this.studentService.save(student);
-        return new ResponseEntity<>(newStudent.getStudentId(), HttpStatus.CREATED);
+        this.studentService.saveStudent(student.isDeleteFlag(), student.getStudentAddress(),
+                student.getStudentDateOfBirth(), student.getStudentEthnicity(), student.getStudentFatherName(),
+                String.valueOf(student.getStudentGender()), student.getStudentMotherName(), student.getStudentName(),
+                student.getStudentParentPhone(), student.getStudentReligion());
+        return new ResponseEntity<>(student.getStudentId(), HttpStatus.CREATED);
     }
 }

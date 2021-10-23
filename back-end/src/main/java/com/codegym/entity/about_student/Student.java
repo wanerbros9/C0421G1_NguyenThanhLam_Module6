@@ -24,7 +24,7 @@ public class Student {
     private Byte studentGender;
     private String studentFatherName;
     private String studentMotherName;
-    private Date studentDateOfBirth;
+    private String studentDateOfBirth;
     private String studentEthnicity;
     private String studentAddress;
     private String studentName;
