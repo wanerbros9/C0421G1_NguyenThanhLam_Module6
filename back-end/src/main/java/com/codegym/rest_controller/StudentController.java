@@ -5,6 +5,7 @@ import com.codegym.entity.about_classroom.Classroom;
 import com.codegym.entity.about_student.Student;
 import com.codegym.entity.about_teacher.Teacher;
 import com.codegym.service.IStudentService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -44,7 +45,9 @@ public class StudentController {
 
     @PutMapping("/edit")
     public ResponseEntity<?> editStudent(@RequestBody @Validated StudentDto studentDto) {
-        studentService.editStudent(studentDto);
-        return new ResponseEntity<>(HttpStatus.OK);
+        Student student = new Student();
+        BeanUtils.copyProperties(studentDto, student);
+        studentService.editStudent(student);
+        return new ResponseEntity<>(student, HttpStatus.OK);
     }
 }

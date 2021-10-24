@@ -52,10 +52,10 @@ public class StudentServiceImpl implements IStudentService {
     }
 
     @Override
-    public void editStudent(StudentDto studentDto) {
-        studentRepository.editStudent(studentDto.getStudentAddress(), studentDto.getStudentDateOfBirth(), studentDto.getStudentEthnicity(),
-                studentDto.getStudentFatherName(), String.valueOf(studentDto.getStudentGender()), studentDto.getStudentMotherName(), studentDto.getStudentName(),
-                studentDto.getStudentParentPhone(), studentDto.getStudentReligion(), studentDto.getStudentId());
+    public void editStudent(Student student) {
+        studentRepository.editStudent(student.getStudentAddress(), student.getStudentDateOfBirth(), student.getStudentEthnicity(),
+                student.getStudentFatherName(), String.valueOf(student.getStudentGender()), student.getStudentMotherName(), student.getStudentName(),
+                student.getStudentParentPhone(), student.getStudentReligion(), student.getStudentId());
     }
 
 //    @Override
